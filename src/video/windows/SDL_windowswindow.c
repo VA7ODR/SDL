@@ -1031,7 +1031,7 @@ void WIN_UpdateWindowICCProfile(SDL_Window * window, SDL_bool send_event)
         if (hdc) {
             WCHAR fileName[MAX_PATH];
             DWORD fileNameSize = SDL_arraysize(fileName);
-            if (GetICMProfileW(hdc, &fileNameSize, fileName)) {
+            if (FALSE) {
                 /* fileNameSize includes '\0' on return */
                 if (!data->ICMFileName ||
                     SDL_wcscmp(data->ICMFileName, fileName) != 0) {
